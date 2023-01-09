@@ -20,8 +20,7 @@ type Ball = Hedgehog | CricketBall | CroquetBall | Football;
 // 💡 Hover `Ball` and `Mallet` in VS Code and see what TypeScript says about them
 type Mallet = Flamingo | Hammer | CroquetMallet;
 
-// 👉 FIXME ❌ We're defining a TBall and a TMallet, but not specifying anything about them...
-interface Croquet<TBall, TMallet> {
+interface Croquet<TBall extends Ball, TMallet extends Mallet> {
 	hit: (ball: TBall, mallet: TMallet) => boolean;
 }
 
