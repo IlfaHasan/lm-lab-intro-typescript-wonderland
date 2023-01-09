@@ -50,7 +50,7 @@ export function playCroquet(): void {
 	};
 
 	// 👉 FIXME ❌ These parameters to hit() aren't right!
-	if (game && game.hit && game.hit(2468, 8642)) {
+	if (game && game.hit && game.hit('Hedgehog', 'Flamingo')) {
 		print('🏆 Success! You scored! 🏆');
 		print('Time to chat with the queen...');
 		return askQuestion('Press ENTER to continue! ', meetTheQueen);
