@@ -1,4 +1,4 @@
-import { endAdventure } from '..';
+import { endAdventure } from '../index';
 import { wakeUp } from './6_wake_up';
 import { askQuestion, clear, print } from '../console';
 
@@ -16,7 +16,7 @@ export function meetTheQueen(): void {
 
 	let guilty: boolean = false;
 
-	let witnesses: Witness[] = []; // 👉 FIXME ❌ - call getWitnesses here
+	let witnesses: Witness[] = getWitnesses(["The Mad Hatter", "The White Rabbit", "The Cheshire Cat", "The March Hare"]);; // 👉 FIXME ❌ - call getWitnesses here
 
 	if (!witnesses || witnesses.length === 0) {
 		print(`No witnesses have come forward to defend you.`);
@@ -44,8 +44,6 @@ export function meetTheQueen(): void {
 		return askQuestion('Press ENTER to continue! ', wakeUp);
 	}
 }
-
-// 👉 FIXME ❌ - this function needs writing to meet the above criteria
-function getWitnesses(): any {
-	return [];
+function getWitnesses(witnessNames: string[]): Array<Witness> {
+	return witnessNames.map(name => {return {name, giveEvidence: () => "Not Guilty"}});
 }
