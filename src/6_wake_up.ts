@@ -1,4 +1,4 @@
-import { endAdventure, haveAdventures } from '..';
+import { endAdventure, haveAdventures } from '../index';
 import { askQuestion, clear, print } from '../console';
 
 // This is a very unusual type setup. It's pobably not a great idea in the real world to nest so many properties
@@ -45,6 +45,13 @@ export function wakeUp(): void {
 }
 
 function tryToWakeUp(): WakeUp {
-	// 👉 FIXME ❌
-	return {};
+		return {
+		wake: {
+			wake: {
+				wake: {
+					canWake: "Yes"
+				}
+			}
+		}
+	};
 }
