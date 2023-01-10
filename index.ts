@@ -7,10 +7,10 @@ export function haveAdventures(): void {
 	print('| Welcome to Wonderland! |');
 	print('--------------------------');
 
-	askQuestion(`What's your name? `, startAdventure); // 👉 FIXME ❌
+	askQuestion(`What's your name? `, startAdventure); 
 }
 
-function failImmediately(): void {
+export function failImmediately(): void {
 	clear(false);
 	return endAdventure();
 }
